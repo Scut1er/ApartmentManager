@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/iconApartment.ico</file>
+        <file>icons/save_negate.png</file>
+        <file>icons/about_negate.png</file>
+        <file>icons/exit_negate.png</file>
+        <file>icons/file_negate.png</file>
+        <file>icons/help_negate.png</file>
+        <file>icons/open_negate.png</file>
+        <file>icons/edit_negate.png</file>
+        <file>icons/delete_negate.png</file>
+        <file>icons/add_negate.png</file>
+        <file>icons/merge_negate.png</file>
+        <file>icons/save_as_negate.png</file>
+    </qresource>
+</RCC>

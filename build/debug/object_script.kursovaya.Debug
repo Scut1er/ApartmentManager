@@ -1,0 +1,11 @@
+debug/Apartment.o
+debug/ApartmentContainer.o
+debug/DatabaseManager.o
+debug/add.o
+debug/addapartmentdialog.o
+debug/main.o
+debug/mainwindow.o
+debug/qrc_resources.o
+debug/moc_add.o
+debug/moc_addapartmentdialog.o
+debug/moc_mainwindow.o
