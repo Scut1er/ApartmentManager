@@ -45,11 +45,14 @@
     <property name="horizontalScrollBarPolicy">
      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
     </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+    </property>
     <property name="showGrid">
      <bool>true</bool>
     </property>
     <property name="sortingEnabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="rowCount">
      <number>0</number>
@@ -67,7 +70,7 @@
      <number>127</number>
     </attribute>
     <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-     <bool>false</bool>
+     <bool>true</bool>
     </attribute>
     <attribute name="horizontalHeaderStretchLastSection">
      <bool>false</bool>

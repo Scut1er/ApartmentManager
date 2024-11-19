@@ -2,49 +2,44 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "DatabaseManager.h"
-#include "ApartmentContainer.h"
+#include <QTableWidgetItem>
+#include <QAction>
+#include <QMenu>
 
-QT_BEGIN_NAMESPACE
+#include "ApartmentContainer.h"
+#include "Apartment.h"
+
 namespace Ui {
 class MainWindow;
 }
-QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots: // Секция для слотов
+    // Методы для обновления таблицы и взаимодействия с данными
     void updateTable();
     void addApartmentToTable(const Apartment& apartment);
     void showAbout(); // Слот для показа окна "ABOUT"
     void showContextMenu(const QPoint &pos); // Слот для показа контекстного меню таблицы
 
-    void NewDatabase_action();
-    void SaveDatabase_action();
-    void SaveAsDatabase_action();
-    void LoadDatabase_action();
-    void MergeDatabase_action();
-    void Exit_action();
+    void onTableSelectionChanged(); // Метод для обновления состояния кнопок
+    int getSelectedRowIndex(); // Метод для получения индекса выбранной строки
+    void Exit_action(); // Слот для выхода из приложения
 
-    void AddAp_action();
-    void EditAp_action();
-    void DelAp_action();
-    void onTableSelectionChanged();
-
+    Ui::MainWindow* getUi() { return ui; }
+    ApartmentContainer& getApartmentContainer() { return apartmentContainer; } // Геттер для apartmentContainer
+    const QString& getCurrentDatabaseFile() const { return currentDatabaseFile; } // Геттер для currentDatabaseFile
+    void setCurrentDatabaseFile(const QString& filename) { currentDatabaseFile = filename; }  // Сеттер для currentDatabaseFile
 
 private:
     Ui::MainWindow *ui;
-    ApartmentContainer apartmentContainer;
-    DatabaseManager dbManager;
-    QString currentDatabaseFile;
-
-    void loadApartmentsIntoTable();
-    int getSelectedRowIndex();
+    ApartmentContainer apartmentContainer; // Контейнер для хранения квартир
+    QString currentDatabaseFile; // Имя текущего файла базы данных
 };
+
 #endif // MAINWINDOW_H

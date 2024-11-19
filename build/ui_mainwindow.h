@@ -154,14 +154,15 @@ public:
         tableWidget->setGeometry(QRect(20, 180, 761, 411));
         tableWidget->setContextMenuPolicy(Qt::ContextMenuPolicy::CustomContextMenu);
         tableWidget->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
+        tableWidget->setEditTriggers(QAbstractItemView::EditTrigger::NoEditTriggers);
         tableWidget->setShowGrid(true);
-        tableWidget->setSortingEnabled(false);
+        tableWidget->setSortingEnabled(true);
         tableWidget->setRowCount(0);
         tableWidget->horizontalHeader()->setVisible(true);
         tableWidget->horizontalHeader()->setCascadingSectionResizes(false);
         tableWidget->horizontalHeader()->setMinimumSectionSize(125);
         tableWidget->horizontalHeader()->setDefaultSectionSize(127);
-        tableWidget->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
+        tableWidget->horizontalHeader()->setProperty("showSortIndicator", QVariant(true));
         tableWidget->horizontalHeader()->setStretchLastSection(false);
         tableWidget->verticalHeader()->setCascadingSectionResizes(false);
         MainWindow->setCentralWidget(centralwidget);

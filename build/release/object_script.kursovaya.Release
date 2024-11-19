@@ -1,11 +1,13 @@
 release/Apartment.o
 release/ApartmentContainer.o
 release/DatabaseManager.o
-release/add.o
 release/addapartmentdialog.o
+release/ap_actions.o
+release/db_actions.o
 release/main.o
 release/mainwindow.o
 release/qrc_resources.o
-release/moc_add.o
 release/moc_addapartmentdialog.o
+release/moc_ap_actions.o
+release/moc_db_actions.o
 release/moc_mainwindow.o

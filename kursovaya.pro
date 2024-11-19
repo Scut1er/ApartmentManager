@@ -13,6 +13,8 @@ SOURCES += \
     ApartmentContainer.cpp \
     DatabaseManager.cpp \
     addapartmentdialog.cpp \
+    ap_actions.cpp \
+    db_actions.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -21,6 +23,8 @@ HEADERS += \
     ApartmentContainer.h \
     DatabaseManager.h \
     addapartmentdialog.h \
+    ap_actions.h \
+    db_actions.h \
     mainwindow.h
 
 FORMS += \
